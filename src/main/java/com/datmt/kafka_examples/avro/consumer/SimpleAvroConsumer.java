@@ -1,4 +1,4 @@
-package com.datmt.kafka_examples.consumer;
+package com.datmt.kafka_examples.avro.consumer;
 
 import com.datmt.kafka_examples.TestMessage;
 import com.datmt.kafka_examples.helpers.Constants;
@@ -6,12 +6,10 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 
 import java.time.Duration;
-import java.time.temporal.TemporalUnit;
 import java.util.List;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 
-public class SimpleConsumer {
+public class SimpleAvroConsumer {
     public static void main(String[] args) {
        consumeMessage();
     }

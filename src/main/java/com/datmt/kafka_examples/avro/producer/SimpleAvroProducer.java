@@ -1,7 +1,6 @@
-package com.datmt.kafka_examples.producer;
+package com.datmt.kafka_examples.avro.producer;
 
 import com.datmt.kafka_examples.TestMessage;
-import org.apache.avro.Protocol;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -10,7 +9,7 @@ import java.util.Properties;
 
 import static com.datmt.kafka_examples.helpers.Constants.SIMPLE_TOPIC;
 
-public class SimpleProducer {
+public class SimpleAvroProducer {
     public static void main(String[] args) {
         sendMessage();
     }
