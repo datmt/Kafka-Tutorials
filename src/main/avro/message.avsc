@@ -1,0 +1,17 @@
+{
+  "namespace": "com.datmt.kafka_examples",
+  "type": "record",
+  "name": "TestMessage",
+  "fields": [
+    {
+      "name": "message",
+      "type": "string",
+      "doc": "The message"
+    },
+    {
+      "name" : "sender",
+      "type" : "string",
+      "doc" : "Sender name"
+    }
+  ]
+}
