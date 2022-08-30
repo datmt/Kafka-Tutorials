@@ -27,7 +27,7 @@ public class SimpleAvroConsumer {
         properties.put("schema.registry.url", "http://localhost:8081");
 
         try (KafkaConsumer<String, TestMessage> consumer = new KafkaConsumer<String, TestMessage>(properties)) {
-            consumer.subscribe(List.of(Constants.SIMPLE_TOPIC));
+            consumer.subscribe(List.of(Constants.SIMPLE_AVRO_TOPIC));
             while (true) {
                 ConsumerRecords<String, TestMessage> messages = consumer.poll(Duration.ofSeconds(3));
 

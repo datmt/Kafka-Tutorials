@@ -7,7 +7,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
 
-import static com.datmt.kafka_examples.helpers.Constants.SIMPLE_TOPIC;
+import static com.datmt.kafka_examples.helpers.Constants.SIMPLE_AVRO_TOPIC;
 
 public class SimpleAvroProducer {
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class SimpleAvroProducer {
 
         try (Producer<String, TestMessage> producer = new KafkaProducer<>(properties)) {
             TestMessage tm = new TestMessage("Hello again", "System");
-            ProducerRecord<String, TestMessage> producerRecord = new ProducerRecord<>(SIMPLE_TOPIC, tm.getSender().toString(), tm);
+            ProducerRecord<String, TestMessage> producerRecord = new ProducerRecord<>(SIMPLE_AVRO_TOPIC, tm.getSender().toString(), tm);
             for (int i =0; i < 4; i++)
                 producer.send(producerRecord);
         }
